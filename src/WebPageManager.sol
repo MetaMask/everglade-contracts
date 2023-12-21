@@ -19,7 +19,7 @@ contract WebPageManager is ERC721 {
         string memory script,
         uint256[] memory childComponentIds,
         string[] memory childComponentLocalNames
-    ) public {
+    ) public returns (uint256) {
         require(childComponentIds.length == childComponentLocalNames.length, "Component IDs and names length mismatch");
 
         uint256 newItemId = itemCounter++;
@@ -31,6 +31,8 @@ contract WebPageManager is ERC721 {
             childComponentIds: childComponentIds,
             childComponentNames: childComponentLocalNames
         });
+
+        return newItemId;
     }
 
     function getComponent(uint256 identifier) public view returns (Component memory) {

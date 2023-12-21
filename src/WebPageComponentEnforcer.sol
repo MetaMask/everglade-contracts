@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.13;
+pragma solidity 0.8.21;
 
-import { CaveatEnforcer } from "../CaveatEnforcer.sol";
-import { Action } from "../utils/Types.sol";
+import { CaveatEnforcer } from "DeleGator/CaveatEnforcer.sol";
+import { Action } from "DeleGator/utils/Types.sol";
 
 /**
  * @title Uint256FirstParamEnforcer
